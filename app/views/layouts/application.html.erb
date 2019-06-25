@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Festival</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <img src="/dog.gif" alt>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a>Shop</a></li>
+          <li><a>TimeLine</a></li>
+          <li><a href="/link">Link</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contents">
+      <div class="left-sidebar">
+        <%= yield :left_sidebar %>
+      </div>
+      <div class="main-content">
+        <%= yield :main_content %>
+      </div>
+      <div class="right-sidebar">
+        <%= yield :right_sidebar %>
+      </div>
+    </div>
+  </body>
+</html>
